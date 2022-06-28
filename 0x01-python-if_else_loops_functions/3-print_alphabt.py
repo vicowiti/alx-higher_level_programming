@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-for ch in range(97, 123):
-    if ch == 101 or ch == 113:
+for a in range(ord('a'), ord('z')+1):
+    if a == ord('q') or a == ord('e'):
         continue
-    else:
-        print("{:c}".format(ch), end='')
+    print("{:c}".format(a), end="")
