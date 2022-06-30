@@ -1,7 +1,4 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import hidden_4
-    my_array = dir(hidden_4).sort()
-    for item in my_array:
-        if not item.startswith("__"):
-            print(item)
+    [print(i) for i in dir(hidden_4) if not i.startswith('__')]
