@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""a module with a class handling getters and setters """
+""" creates class Square """
 
 
 class Square:
-    """a class handling getters and setters """
+    """ Square class"""
     def __init__(self, size=0):
-        """runs upon instantiation"""
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -15,17 +14,16 @@ class Square:
 
     @property
     def size(self):
-        """private size getter"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """setting the size"""
-        if type(size) != int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
 
     def area(self):
-        """calculating the area"""
         return self.__size * self.__size
