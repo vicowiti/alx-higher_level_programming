@@ -8,4 +8,4 @@ class Square:
     def __init__(self, size):
         """ Method runs immidiately upon instatiation """
 
-        self.size = size
+        self.__size = size
